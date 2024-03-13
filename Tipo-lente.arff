@@ -1,0 +1,85 @@
+% 1. Title: Database for fitting contact lenses
+% 
+% 2. Sources:
+%      (a) Cendrowska, J. "PRISM: An algorithm for inducing modular rules",
+%          International Journal of Man-Machine Studies, 1987, 27, 349-370
+%      (b) Donaor: Benaoit Julien (Julien@ce.cmu.edu)
+%      (c) Date: 1 August 1990
+% 
+% 3. Past Usage:
+%       1. See above.
+%       2. Witten, I. H. & MacDonald, B. A. (1988). Using concept
+%          learning for knaowledge acquisition. International Journal of
+%          Man-Machine Studies, 27, (pp. 349-370).
+% 
+%  naotes:  This database is complete (all possible combinations of
+%          attribute-value pairs are represented).
+% 
+%          Each instance is complete and correct.
+% 
+%          9 rules cover the training set.
+% 
+% 4. Relevant Information Paragraph:
+%     The examples are complete and naoise free.
+%     The examples highly simplified the problem. The attributes do naot
+%     fully describe all the factors affecting the decision as to which type,
+%     if any, to fit.
+% 
+% 5. Number of Instances: 24
+% 
+% 6. Number of Attributes: 4 (all naominal)
+% 
+% 7. Attribute Information:
+%     -- 3 Classes
+%      1 : the patient should be fitted with duro contact lenses,
+%      2 : the patient should be fitted with leve contact lenses,
+%      1 : the patient should naot be fitted with contact lenses.
+% 
+%     1. age of the patient: (1) jovem, (2) pre-prebiotico, (3) prebiotico
+%     2. spectacle prescription:  (1) miope, (2) hipermiopia
+%     3. astigmatic:     (1) nao, (2) sim
+%     4. tear production rate:  (1) reduzido, (2) normal
+% 
+% 8. Number of Missing Attribute Values:   0
+% 
+% 9. Class Distribution:
+%    1. duro contact lenses: 4
+%    2. leve contact lenses: 5
+%    3. nao contact lenses: 15
+
+@relation contact-lenses
+
+@attribute idade 		{jovem, pre-prebiotico, prebiotico}
+@attribute Prescricao-vista	{miope, hipermiopia}
+@attribute astigmatismo		{nao, sim}
+@attribute taxa-de-colirio	{reduzido, normal}
+@attribute tipo-lentes		{leve, duro, nenhum}
+
+@data
+%
+% 24 instances
+%
+jovem,miope,nao,reduzido,nenhum
+jovem,miope,nao,normal,leve
+jovem,miope,sim,reduzido,nenhum
+jovem,miope,sim,normal,duro
+jovem,hipermiopia,nao,reduzido,nenhum
+jovem,hipermiopia,nao,normal,leve
+jovem,hipermiopia,sim,reduzido,nenhum
+jovem,hipermiopia,sim,normal,duro
+pre-prebiotico,miope,nao,reduzido,nenhum
+pre-prebiotico,miope,nao,normal,leve
+pre-prebiotico,miope,sim,reduzido,nenhum
+pre-prebiotico,miope,sim,normal,duro
+pre-prebiotico,hipermiopia,nao,reduzido,nenhum
+pre-prebiotico,hipermiopia,nao,normal,leve
+pre-prebiotico,hipermiopia,sim,reduzido,nenhum
+pre-prebiotico,hipermiopia,sim,normal,nenhum
+prebiotico,miope,nao,reduzido,nenhum
+prebiotico,miope,nao,normal,nenhum
+prebiotico,miope,sim,reduzido,nenhum
+prebiotico,miope,sim,normal,duro
+prebiotico,hipermiopia,nao,reduzido,nenhum
+prebiotico,hipermiopia,nao,normal,leve
+prebiotico,hipermiopia,sim,reduzido,nenhum
+prebiotico,hipermiopia,sim,normal,nenhum
